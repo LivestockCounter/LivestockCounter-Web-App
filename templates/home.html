@@ -37,8 +37,8 @@
             <ul>
                 <li><a href="#home" onclick="refreshApp()">Home</a></li>
                 <li><a href="#home" onclick="toggleTranslation()">Translate</a></li>
-                <li><a href="#home" class="tips_guides" onclick="">Tips & Guides</a></li>
-                <li><a href="#home">Contact Us</a></li>
+                <li><a href="#home" class="tips_guides" >Tips & Guides</a></li>
+                <li><a href="#home" class="contact_us" >Contact Us</a></li>
             </ul>
         </nav>
 </header>
@@ -63,6 +63,50 @@
  </div>
 <!-- tips_pop_up section -->
 
+<!-- contact_pop_up section -->
+<div class="contact_pop_up">
+    <span>&times;</span>
+    <div class="contact_container">
+        <div class="first_row">
+            <div class="creator_card">
+                <img src="{{ url_for('static', filename='icons/daniel.jpg') }}" alt="daniel">
+                <h1>Daniel David B. Roldan</h1>
+                <p>Project Manager/Programmer</p>
+                <div class="creator_contact">
+                    <a href="#home">Facebook</a>
+                </div>
+            </div>
+            <div class="creator_card">
+                <img src="{{ url_for('static', filename='icons/jonas.jpg') }}" alt="jonas">
+                <h1>Jonas G. Casimero</h1>
+                <p>Quality Assurance Tester</p>
+                <div class="creator_contact">
+                    <a href="#home">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="second_row">
+            <h2 class="contact_title">Members</h2>
+            <div class="creator_card">
+                <img src="{{ url_for('static', filename='icons/paul.jpg') }}" alt="paul">
+                <h1>John Paul N. Geogangco</h1>
+                <p>User Interface (UI) Designer</p>
+                <div class="creator_contact">
+                    <a href="#home">Facebook</a>
+                </div>
+            </div>
+            <div class="creator_card">
+                <img src="{{ url_for('static', filename='icons/lyod.jpg') }}" alt="lyod">
+                <h1>John Lyod E. San Miguel</h1>
+                <p>User Interface (UI) Designer</p>
+                <div class="creator_contact">
+                    <a href="#home">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<!-- contact_pop_up section -->
 
 <!-- mainbody section -->
 <div class="mainbody">
