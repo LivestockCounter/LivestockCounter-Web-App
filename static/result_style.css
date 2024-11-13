@@ -107,14 +107,16 @@ html {
     height: 100%;
     width: 100%;
     z-index: 100;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.75s, visibility 0.75s;
 }
 .tips_container{
-    background: rgba(0, 0, 0, 0.9);
     height: 70%;
+    min-height: 400px;
     width: 80%;
     padding: 30px;
     border-radius: 8px;
@@ -149,6 +151,119 @@ html {
     min-width: 300px;
     height: auto;
     object-fit: cover;
+}
+
+/* CONTACT CSS */
+.contact_pop_up{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+.contact_pop_up span{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+}
+.contact_container{
+    position: relative;
+    height: 580px;
+    width: 500px;
+    padding: 30px;
+    border-radius: 8px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+}
+.first_row, .second_row{
+    text-align: center;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.first_row h1, .second_row h1{
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.first_row p, .second_row p{
+    font-size: 12px;
+}
+.creator_card{
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    height: 100%;
+    min-height: 230px;
+    width: 200px;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    transition: 0.5s ease-in-out;
+}
+.creator_card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: 0.5s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.7) 0px 8px 16px -8px;
+}
+.creator_card:hover img{
+    box-shadow: rgba(50, 50, 93, 0.75) 0px 13px 27px -5px, rgba(0, 0, 0, 1) 0px 8px 16px -8px;
+}
+.contact_title{
+    color: white;
+    padding-top: 20px;
+    font-size: 40px;
+}
+.creator_contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    margin-top: 10px;
+}
+.creator_contact a{
+    cursor: pointer;
+    outline: none;
+    padding: 6px 30px;
+    background: transparent;
+    backdrop-filter: blur(2px);
+    border: 1px solid #00c6ff;
+    color: #00c6ff;
+    text-decoration: none;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.1) 0px 8px 16px -8px;
+    transition: all 0.5s ease-in-out;
+}
+.creator_contact a:hover {
+    color: white;
+    background: #0072ff;
+    border: 1px solid transparent;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.8) 0px 8px 16px -8px;
 }
 
 /* OUTPUT_CONTAINER CSS */

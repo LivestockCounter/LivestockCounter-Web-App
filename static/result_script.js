@@ -34,20 +34,33 @@ document.querySelector(".download a").addEventListener("mouseout", function() {
     document.querySelector(".download a").classList.remove("hover-download");
 });
 
-
 // TIPS & GUIDES
 document.querySelectorAll('.tips_guides').forEach(item => {
     item.addEventListener('click', function() {
-        document.querySelector('.tips_pop_up').style.display = 'flex';
+        document.querySelector('.tips_pop_up').style.opacity = '1';
+        document.querySelector('.tips_pop_up').style.visibility = 'visible';
     });
 });
 document.querySelector('.tips_pop_up').onclick = () =>{
-    document.querySelector('.tips_pop_up').style.display = 'none';
+    document.querySelector('.tips_pop_up').style.opacity = '0';
+    document.querySelector('.tips_pop_up').style.visibility = 'hidden';
+}
+
+// CONTACT
+document.querySelectorAll('.contact_us').forEach(item => {
+    item.addEventListener('click', function() {
+        document.querySelector('.contact_pop_up').style.opacity = '1';
+        document.querySelector('.contact_pop_up').style.visibility = 'visible';
+    });
+});
+document.querySelector('.contact_pop_up span').onclick = () =>{
+    document.querySelector('.contact_pop_up').style.opacity = '0';
+    document.querySelector('.contact_pop_up').style.visibility = 'hidden';
 }
 
 // TRANSLATION
 const originaltext = {
-    "result_info": "This version of Livestock Counting System still needs improvement. Results may sometimes include incorrect detections and inaccurate counts. <strong><br>Thank you For using our system!</strong>",
+    "result_info": "This version of Livestock Counting System still needs improvement. Results may sometimes include incorrect detections and inaccurate counts. <strong><br>Thank you for using our system!</strong>",
     "tip_1": "<strong>1. Increase the Accuracy:</strong> Use images and videos that show the entire animal clearly.",
     "tip_2": "<strong>2. Faster Video Processing:</strong> For faster processing, use videos with 30 FPS and a lower bitrate.",
     "tip_3": "<strong>3. File Format:</strong> Use landscape-oriented images and videos. Portrait formats may be cropped during processing.",

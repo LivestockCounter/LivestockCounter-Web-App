@@ -223,14 +223,26 @@ const translations = {
 // TIPS & GUIDES
 document.querySelectorAll('.tips_guides').forEach(item => {
     item.addEventListener('click', function() {
-        document.querySelector('.tips_pop_up').style.display = 'flex';
+        document.querySelector('.tips_pop_up').style.opacity = '1';
+        document.querySelector('.tips_pop_up').style.visibility = 'visible';
     });
 });
 document.querySelector('.tips_pop_up').onclick = () =>{
-    document.querySelector('.tips_pop_up').style.display = 'none';
+    document.querySelector('.tips_pop_up').style.opacity = '0';
+    document.querySelector('.tips_pop_up').style.visibility = 'hidden';
 }
 
-
+// CONTACT
+document.querySelectorAll('.contact_us').forEach(item => {
+    item.addEventListener('click', function() {
+        document.querySelector('.contact_pop_up').style.opacity = '1';
+        document.querySelector('.contact_pop_up').style.visibility = 'visible';
+    });
+});
+document.querySelector('.contact_pop_up span').onclick = () =>{
+    document.querySelector('.contact_pop_up').style.opacity = '0';
+    document.querySelector('.contact_pop_up').style.visibility = 'hidden';
+}
 
 // LOADER
 const loader = document.querySelector(".loader");
