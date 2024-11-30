@@ -84,7 +84,7 @@ function uploadFile(file) {
     li.classList.remove('in-prog');
     li.innerHTML = `
         <div class="col">
-            <img src="static/icons/${iconSelector(file.type)}" alt="">
+            <img src="static/icons/${iconSelector(file.type)}" alt="" style="width: auto; height: 80px;">
         </div>
         <div class="col">
             <div class="file-name">
@@ -97,8 +97,8 @@ function uploadFile(file) {
             <div class="file-size">${(file.size / (1024 * 1024)).toFixed(2)} MB</div>
         </div>
         <div class="col">
-            <svg xmlns="http://www.w3.org/2000/svg" class="cross" height="20" width="20"><path d="m5.979 14.917-.854-.896 4-4.021-4-4.062.854-.896 4.042 4.062 4-4.062.854.896-4 4.062 4 4.021-.854.896-4-4.063Z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="tick" height="20" width="20"></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="cross" height="20" width="20" style="margin-right: 20px;"><path d="m5.979 14.917-.854-.896 4-4.021-4-4.062.854-.896 4.042 4.062 4-4.062.854.896-4 4.062 4 4.021-.854.896-4-4.063Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="tick" height="20" width="20" style="margin-right: 20px;"></svg>
         </div>
     `;
     listContainer.prepend(li);
@@ -107,8 +107,8 @@ function uploadFile(file) {
     var data = new FormData();
     data.append('file', file);
 
-    // Send file to Flask endpoint (assuming '/upload')
-    http.open('POST', true);
+    // Send file to Flask endpoint
+    http.open('POST', '/upload');
 
     // Track progress
     http.upload.onprogress = (e) => {
@@ -120,7 +120,7 @@ function uploadFile(file) {
     // On successful upload
     http.onload = () => {
         if (http.status === 200) {
-            li.classList.add('complete');
+            li.classList.remove('complete');
             li.classList.remove('in-prog');
         } else {
             console.error('Upload failed', http.status, http.statusText);
@@ -154,7 +154,7 @@ drop_menu.onclick = function(){
 
 // TRANSLATION
 const originaltext = {
-        "intro_text": "Say goodbye to time-consuming manual counting and experience a faster, more reliable way to manage your livestock with precision and efficiency. Our automated Livestock Counting System is designed to make counting animals easier than ever. Integrating advance image recognition and powerful YOLOv8 framework, our system identifies and counts livestock—including cattle, chickens, and goats—directly from images or videos.",
+        "intro_text": "An automated Livestock Counting System, designed to make counting animals easier than ever. Integrating advance image recognition and powerful YOLOv8 framework, our system identifies and counts livestock—including cattle, chickens, and goats—directly from images or videos.",
         "upload_h1": "Upload a file to Count for Livestocks.",
         "upload_p": "Only images & videos are accepted.",
         "upload_span": "Drag & Drop file here",
@@ -170,7 +170,7 @@ const originaltext = {
     };
 
 const translations = {
-    "intro_text": "Magpaalam na sa mabagal at nakakaubos ng oras na manu-manong pagbibilang at makaranas ng mas mabilis, mas maaasahang paraan upang i-manage ang iyong mga alagang hayop.Ang aming awtomatikong Livestock Counting System ay dinisenyo upang gawing mas madali ang pagbibilang ng mga hayop. Gamit ang pinagsasamang advance image recognition at  YOLOv8 framework, ang aming system ay kayang tumukoy at magbilang ng mga hayop—kabilang ang baka, manok, at kambing—direkta mula sa mga larawan o video.",
+    "intro_text": "Isang awtomatikong Livestock Counting System na dinisenyo upang gawing mas madali ang pagbibilang ng mga hayop. Gamit ang pinagsasamang advance image recognition at  YOLOv8 framework, ang aming system ay kayang tumukoy at magbilang ng mga hayop—kabilang ang baka, manok, at kambing—direkta mula sa mga larawan o video.",
     "upload_h1": "Mag-upload ng file para mabilang ang mga hayop.",
     "upload_p": "Larawan at video lang ang pwedeng gamitin.",
     "upload_span": "Ilagay ang file dito",
