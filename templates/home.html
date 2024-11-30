@@ -7,7 +7,8 @@
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/logo2.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='home_style.css') }}">
 </head>
-<body >
+<body>
+    <div class="body_img"></div>
 <!-- loading section -->
 <div class="loader">
     <div class="ring"></div>
@@ -26,7 +27,7 @@
 <header class="navbar_container">
         <div class="logo">
         <a href="#home"><img src="{{ url_for('static', filename='icons/logo.png') }}"></a>
-        <a href="#home"><h1>LivestockCounter</h1></a>
+        <a href="#home"><h1><span>Livestock</span>Counter</h1></a>
         </div>
         <div class="drop_menu">
             <div class="line"></div>
@@ -73,7 +74,7 @@
                 <h1>Daniel David B. Roldan</h1>
                 <p>Project Manager/Programmer</p>
                 <div class="creator_contact">
-                    <a href="#home">Facebook</a>
+                    <a href="https://web.facebook.com/DavidDanielRoldan" target="_blank">Facebook</a>
                 </div>
             </div>
             <div class="creator_card">
@@ -81,7 +82,7 @@
                 <h1>Jonas G. Casimero</h1>
                 <p>Quality Assurance Tester</p>
                 <div class="creator_contact">
-                    <a href="#home">Facebook</a>
+                    <a href="https://web.facebook.com/casimerojonas24" target="_blank">Facebook</a>
                 </div>
             </div>
         </div>
@@ -92,7 +93,7 @@
                 <h1>John Paul N. Geogangco</h1>
                 <p>User Interface (UI) Designer</p>
                 <div class="creator_contact">
-                    <a href="#home">Facebook</a>
+                    <a href="https://web.facebook.com/profile.php?id=100008489558174" target="_blank">Facebook</a>
                 </div>
             </div>
             <div class="creator_card">
@@ -100,7 +101,7 @@
                 <h1>John Lyod E. San Miguel</h1>
                 <p>User Interface (UI) Designer</p>
                 <div class="creator_contact">
-                    <a href="#home">Facebook</a>
+                    <a href="https://web.facebook.com/Johnlyod.Sanmiguel.9" target="_blank">Facebook</a>
                 </div>
             </div>
         </div>
@@ -110,6 +111,7 @@
 
 <!-- mainbody section -->
 <div class="mainbody">
+    <img src="{{ url_for('static', filename='backgrounds/intro_background.png') }}" class="main_img" alt="">
 <!-- intro section -->
     <div class="intro">
         <img src="{{ url_for('static', filename='backgrounds/intro_background.png') }}" alt="">
@@ -161,4 +163,16 @@
 <!-- mainbody section -->
 <script src="{{ url_for('static', filename='home_script.js') }}"></script>
 </body>
+<style>
+    .body_img{
+        background-image: url("{{ url_for('static', filename='backgrounds/background.png') }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+    </style>
 </html>
