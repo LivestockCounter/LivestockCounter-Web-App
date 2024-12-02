@@ -274,8 +274,8 @@ function restartApp() {
         fetch('/restart', { method: 'POST' })
             .then(response => {
                 if (response.ok) {
-                    window.location.href = '/';
                     localStorage.removeItem("processing_Inpogress");
+                    window.location.href = '/';
                 }
             });
     }
