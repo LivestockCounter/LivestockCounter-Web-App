@@ -374,8 +374,9 @@ html {
     align-items: center;
     justify-content: space-between;
     font-weight: bold;
-    top: 3.5rem;
+    top: 9vh;
     width: 100%;
+    padding-top: 5px;
 }
 .mainbody .main_img{
     position: absolute;
