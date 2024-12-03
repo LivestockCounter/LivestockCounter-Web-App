@@ -274,6 +274,8 @@ function restartApp() {
         fetch('/restart', { method: 'POST' })
             .then(response => {
                 if (response.ok) {
+                    loader.classList.remove("loader_invisible");
+                    process.classList.add("process_visible");
                     localStorage.removeItem("processing_Inpogress");
                     window.location.href = '/';
                 }
