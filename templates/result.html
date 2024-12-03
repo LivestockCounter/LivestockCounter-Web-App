@@ -33,7 +33,7 @@
 <header class="navbar_container">
         <div class="logo">
         <a href="#home"><img src="{{ url_for('static', filename='icons/logo.png') }}"></a>
-        <a href="#home" onclick="restartApp()"><h1>LivestockCounter</h1></a>
+        <a href="#home" onclick="restartApp()"><h1><span>Livestock</span>Counter</h1></a>
         </div>
         <div class="drop_menu">
             <div class="line"></div>
@@ -79,7 +79,7 @@
                 <h1>Daniel David B. Roldan</h1>
                 <p>Project Manager/Programmer</p>
                 <div class="creator_contact">
-                    <a href="#home">Facebook</a>
+                    <a href="https://web.facebook.com/DavidDanielRoldan" target="_blank">Facebook</a>
                 </div>
             </div>
             <div class="creator_card">
@@ -87,7 +87,7 @@
                 <h1>Jonas G. Casimero</h1>
                 <p>Quality Assurance Tester</p>
                 <div class="creator_contact">
-                    <a href="#home">Facebook</a>
+                    <a href="https://web.facebook.com/casimerojonas24" target="_blank">Facebook</a>
                 </div>
             </div>
         </div>
@@ -98,7 +98,7 @@
                 <h1>John Paul N. Geogangco</h1>
                 <p>User Interface (UI) Designer</p>
                 <div class="creator_contact">
-                    <a href="#home">Facebook</a>
+                    <a href="https://web.facebook.com/profile.php?id=100008489558174" target="_blank">Facebook</a>
                 </div>
             </div>
             <div class="creator_card">
@@ -106,7 +106,7 @@
                 <h1>John Lyod E. San Miguel</h1>
                 <p>User Interface (UI) Designer</p>
                 <div class="creator_contact">
-                    <a href="#home">Facebook</a>
+                    <a href="https://web.facebook.com/Johnlyod.Sanmiguel.9" target="_blank">Facebook</a>
                 </div>
             </div>
         </div>
@@ -120,9 +120,9 @@
     <div class="output_container">
         <div class="output_link">
             <h1>Livestock Detection Result</h1>
-            <p class="result_info">Disclaimer: This version of Livestock Counting System is under improvement. 
-                Results may sometimes include incorrect detections and inaccurate counts. 
-                <strong><br>Thank you for using our system!</strong></p>
+            <p class="result_disclaimer"><span>Disclaimer:</span> This version of Livestock Counting System is under improvement. 
+                Results may sometimes include incorrect detections and inaccurate counts.</p> 
+            <p class="result_thank"><strong>Thank you for using our system!</strong></p>
             <div class="links">
                 <div class="back_button">
                     <a href="/" onclick="restartApp()">Home</a>
