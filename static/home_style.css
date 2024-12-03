@@ -216,8 +216,7 @@ html {
     transition: opacity 0.75s, visibility 0.75s;
 }
 .tips_container{
-    height: 70%;
-    min-height: 400px;
+    height: 55vh;
     width: 80%;
     padding: 30px;
     border-radius: 8px;
@@ -624,7 +623,6 @@ html {
     border: 1px solid transparent;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.8) 0px 8px 16px -8px;
 }
-
 .list-section{
     opacity: 0;
     max-height: 0;
@@ -814,7 +812,7 @@ html {
     .navbar{
         position: absolute;
         height: 0;
-        top: 53px;
+        top: 9vh;
         left: 0;
         right: 0;
         width: 100%;
@@ -825,12 +823,12 @@ html {
         text-align: center;
     }
     .navbar.active{
-        height: 140px;
+        height: 20vh;
     }
     .navbar ul{
         display: block;
         width: fit-content;
-        margin: 25px auto;
+        margin: 10px auto;
         text-align: center;
         transition: 0.5s ease-in-out;
         opacity: 0;
@@ -845,6 +843,10 @@ html {
 @media (max-width: 570px) {
     .loader{
         font-size: 13px;
+    }
+    .contact_title{
+        text-align: left;
+        font-size: 30px;
     }
     .tips_container .tips h1{
         font-size: 35px;
@@ -882,6 +884,10 @@ html {
     .creator_card{
         padding-top: 10px;
         width: 180px;
+        height: 90%;
+    }
+    .tips_container {
+        height: 65%;
     }
     .tips_container .tips h1{
         font-size: 30px;
