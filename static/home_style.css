@@ -602,15 +602,17 @@ html {
     display: flex;
 }
 .list-section .submit_button{
-    color: #0072ff;
-    border: none;
+    cursor: pointer;
     outline: none;
     padding: 7px 30px;
-    border-radius: 50px;
-    cursor: pointer;
     background: transparent;
     backdrop-filter: blur(2px);
     border: 1px solid #0072ff;
+    color: #0072ff;
+    text-decoration: none;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: uppercase;
     transition: all 0.5s ease-in-out;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
