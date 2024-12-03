@@ -4,6 +4,9 @@ body{
     background: linear-gradient(to right, #eeff00, #ffd000);
     background-size: cover;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 *{
     font-family: 'Ubuntu', sans-serif;
     caret-color: transparent; 
