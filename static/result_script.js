@@ -60,7 +60,8 @@ document.querySelector('.contact_pop_up span').onclick = () =>{
 
 // TRANSLATION
 const originaltext = {
-    "result_info": "Disclaimer: This version of Livestock Counting System is under improvement. Results may sometimes include incorrect detections and inaccurate counts. <strong><br>Thank you for using our system!</strong>",
+    "result_disclaimer": "<span>Disclaimer:</span> This version of Livestock Counting System is under improvement.  Results may sometimes include incorrect detections and inaccurate counts.",
+    "result_thank": "<strong>Thank you for using our system!</strong>",
     "tip_1": "<strong>1. Increase the Accuracy:</strong> Use images and videos that show the entire animal clearly.",
     "tip_2": "<strong>2. Faster Video Processing:</strong> For faster processing, use videos with 30 FPS and a lower bitrate.",
     "tip_3": "<strong>3. File Format:</strong> Use landscape-oriented images and videos. Portrait formats may be cropped during processing.",
@@ -69,7 +70,8 @@ const originaltext = {
 };
 
 const translations = {
-"result_info": "Pahiwatig: Ang Livestock Counting System na ito ay nangangailangan pa ng kaunting kaayusan. Ang mga resulta ay maaaring magkaroon ng mga maling detection at hindi tamang bilang. <strong><br>Salamat sa paggamit ng aming system!<strong>",
+"result_disclaimer": "<span>Pahiwatig:</span> Ang Livestock Counting System na ito ay nangangailangan pa ng kaunting kaayusan. Ang mga resulta ay maaaring magkaroon ng mga maling detection at hindi tamang bilang.",
+"result_thank": "<strong>Salamat sa paggamit ng aming system!<strong>",
 "tip_1": "<strong>1. Increase the Accuracy:</strong> Gumamit ng mga larawan at video kung saan makikita ang buong hayop.",
 "tip_2": "<strong>2. Faster Video Processing:</strong> Para sa mas mabilis na pagproseso, gumamit ng video na may 30 FPS at mababang bitrate.",
 "tip_3": "<strong>3. File Format:</strong> Gumamit ng landscape-oriented na mga larawan at video. Maaaring ma-crop ang mga file na nakaformat ng portrait.",
@@ -81,14 +83,16 @@ let isTranslated = false;
 
 function toggleTranslation() {
     if (isTranslated) {
-    document.querySelector(".result_info").innerHTML = originaltext["result_info"];
+    document.querySelector(".result_disclaimer").innerHTML = originaltext["result_disclaimer"];
+    document.querySelector(".result_thank").innerHTML = originaltext["result_thank"];
     document.querySelector(".tip_1").innerHTML = originaltext["tip_1"];
     document.querySelector(".tip_2").innerHTML = originaltext["tip_2"];
     document.querySelector(".tip_3").innerHTML = originaltext["tip_3"];
     document.querySelector(".tip_4").innerHTML = originaltext["tip_4"];
     document.querySelector(".tip_5").innerHTML = originaltext["tip_5"];
 } else {
-    document.querySelector(".result_info").innerHTML = translations["result_info"];
+    document.querySelector(".result_disclaimer").innerHTML = translations["result_disclaimer"];
+    document.querySelector(".result_thank").innerHTML = translations["result_thank"];
     document.querySelector(".tip_1").innerHTML = translations["tip_1"];
     document.querySelector(".tip_2").innerHTML = translations["tip_2"];
     document.querySelector(".tip_3").innerHTML = translations["tip_3"];
