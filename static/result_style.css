@@ -109,9 +109,10 @@ html {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    top: 4.5rem;
+    top: 9vh;
     width: 100%;
     height: auto;
+    padding-top: 5px;
 }
 
 /* TIPS CSS */
